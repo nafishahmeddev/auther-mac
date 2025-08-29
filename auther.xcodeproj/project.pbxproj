@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2681C882E16B6D0000EE6E3 /* SwiftOTP in Frameworks */ = {isa = PBXBuildFile; productRef = E2681C872E16B6D0000EE6E3 /* SwiftOTP */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2681C5D2E169A10000EE6E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2681C462E169A0F000EE6E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2681C4D2E169A0F000EE6E3;
+			remoteInfo = auther;
+		};
+		E2681C672E169A10000EE6E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2681C462E169A0F000EE6E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2681C4D2E169A0F000EE6E3;
+			remoteInfo = auther;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E2681C4E2E169A0F000EE6E3 /* auther.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = auther.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2681C5C2E169A10000EE6E3 /* autherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = autherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2681C662E169A10000EE6E3 /* autherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = autherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E2681C502E169A0F000EE6E3 /* auther */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = auther;
+			sourceTree = "<group>";
+		};
+		E2681C5F2E169A10000EE6E3 /* autherTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = autherTests;
+			sourceTree = "<group>";
+		};
+		E2681C692E169A10000EE6E3 /* autherUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = autherUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2681C4B2E169A0F000EE6E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2681C882E16B6D0000EE6E3 /* SwiftOTP in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2681C592E169A10000EE6E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2681C632E169A10000EE6E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E2681C452E169A0F000EE6E3 = {
+			isa = PBXGroup;
+			children = (
+				E2681C502E169A0F000EE6E3 /* auther */,
+				E2681C5F2E169A10000EE6E3 /* autherTests */,
+				E2681C692E169A10000EE6E3 /* autherUITests */,
+				E2681C862E16B6D0000EE6E3 /* Frameworks */,
+				E2681C4F2E169A0F000EE6E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2681C4F2E169A0F000EE6E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2681C4E2E169A0F000EE6E3 /* auther.app */,
+				E2681C5C2E169A10000EE6E3 /* autherTests.xctest */,
+				E2681C662E169A10000EE6E3 /* autherUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2681C862E16B6D0000EE6E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2681C4D2E169A0F000EE6E3 /* auther */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2681C702E169A10000EE6E3 /* Build configuration list for PBXNativeTarget "auther" */;
+			buildPhases = (
+				E2681C4A2E169A0F000EE6E3 /* Sources */,
+				E2681C4B2E169A0F000EE6E3 /* Frameworks */,
+				E2681C4C2E169A0F000EE6E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E2681C502E169A0F000EE6E3 /* auther */,
+			);
+			name = auther;
+			packageProductDependencies = (
+				E2681C872E16B6D0000EE6E3 /* SwiftOTP */,
+			);
+			productName = auther;
+			productReference = E2681C4E2E169A0F000EE6E3 /* auther.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E2681C5B2E169A10000EE6E3 /* autherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2681C732E169A10000EE6E3 /* Build configuration list for PBXNativeTarget "autherTests" */;
+			buildPhases = (
+				E2681C582E169A10000EE6E3 /* Sources */,
+				E2681C592E169A10000EE6E3 /* Frameworks */,
+				E2681C5A2E169A10000EE6E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2681C5E2E169A10000EE6E3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E2681C5F2E169A10000EE6E3 /* autherTests */,
+			);
+			name = autherTests;
+			packageProductDependencies = (
+			);
+			productName = autherTests;
+			productReference = E2681C5C2E169A10000EE6E3 /* autherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E2681C652E169A10000EE6E3 /* autherUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2681C762E169A10000EE6E3 /* Build configuration list for PBXNativeTarget "autherUITests" */;
+			buildPhases = (
+				E2681C622E169A10000EE6E3 /* Sources */,
+				E2681C632E169A10000EE6E3 /* Frameworks */,
+				E2681C642E169A10000EE6E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2681C682E169A10000EE6E3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E2681C692E169A10000EE6E3 /* autherUITests */,
+			);
+			name = autherUITests;
+			packageProductDependencies = (
+			);
+			productName = autherUITests;
+			productReference = E2681C662E169A10000EE6E3 /* autherUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2681C462E169A0F000EE6E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					E2681C4D2E169A0F000EE6E3 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					E2681C5B2E169A10000EE6E3 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = E2681C4D2E169A0F000EE6E3;
+					};
+					E2681C652E169A10000EE6E3 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = E2681C4D2E169A0F000EE6E3;
+					};
+				};
+			};
+			buildConfigurationList = E2681C492E169A0F000EE6E3 /* Build configuration list for PBXProject "auther" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2681C452E169A0F000EE6E3;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E2681C852E16B635000EE6E3 /* XCRemoteSwiftPackageReference "SwiftOTP" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E2681C4F2E169A0F000EE6E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2681C4D2E169A0F000EE6E3 /* auther */,
+				E2681C5B2E169A10000EE6E3 /* autherTests */,
+				E2681C652E169A10000EE6E3 /* autherUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2681C4C2E169A0F000EE6E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2681C5A2E169A10000EE6E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2681C642E169A10000EE6E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2681C4A2E169A0F000EE6E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2681C582E169A10000EE6E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2681C622E169A10000EE6E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2681C5E2E169A10000EE6E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2681C4D2E169A0F000EE6E3 /* auther */;
+			targetProxy = E2681C5D2E169A10000EE6E3 /* PBXContainerItemProxy */;
+		};
+		E2681C682E169A10000EE6E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2681C4D2E169A0F000EE6E3 /* auther */;
+			targetProxy = E2681C672E169A10000EE6E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E2681C6E2E169A10000EE6E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E2681C6F2E169A10000EE6E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		E2681C712E169A10000EE6E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = auther/auther.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Auther;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.nafish.auther;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E2681C722E169A10000EE6E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = auther/auther.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Auther;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.nafish.auther;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E2681C742E169A10000EE6E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.nafish.autherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/auther.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/auther";
+			};
+			name = Debug;
+		};
+		E2681C752E169A10000EE6E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.nafish.autherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/auther.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/auther";
+			};
+			name = Release;
+		};
+		E2681C772E169A10000EE6E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.nafish.autherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = auther;
+			};
+			name = Debug;
+		};
+		E2681C782E169A10000EE6E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.nafish.autherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = auther;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2681C492E169A0F000EE6E3 /* Build configuration list for PBXProject "auther" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2681C6E2E169A10000EE6E3 /* Debug */,
+				E2681C6F2E169A10000EE6E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2681C702E169A10000EE6E3 /* Build configuration list for PBXNativeTarget "auther" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2681C712E169A10000EE6E3 /* Debug */,
+				E2681C722E169A10000EE6E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2681C732E169A10000EE6E3 /* Build configuration list for PBXNativeTarget "autherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2681C742E169A10000EE6E3 /* Debug */,
+				E2681C752E169A10000EE6E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2681C762E169A10000EE6E3 /* Build configuration list for PBXNativeTarget "autherUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2681C772E169A10000EE6E3 /* Debug */,
+				E2681C782E169A10000EE6E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E2681C852E16B635000EE6E3 /* XCRemoteSwiftPackageReference "SwiftOTP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lachlanbell/SwiftOTP";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E2681C872E16B6D0000EE6E3 /* SwiftOTP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2681C852E16B635000EE6E3 /* XCRemoteSwiftPackageReference "SwiftOTP" */;
+			productName = SwiftOTP;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E2681C462E169A0F000EE6E3 /* Project object */;
+}
