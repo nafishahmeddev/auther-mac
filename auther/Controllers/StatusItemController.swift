@@ -8,6 +8,7 @@ import SwiftUI
 
 extension Notification.Name {
     static let openSettingsWindow = Notification.Name("openSettingsWindow")
+    static let closeSettingsWindow = Notification.Name("closeSettingsWindow")
 }
 
 final class StatusItemController: NSObject {
@@ -17,12 +18,14 @@ final class StatusItemController: NSObject {
 
     // Dependencies
     private let appData: AccountViewModel
+    private let windowManager: WindowManager
 
     // Retain hosting controller
     private var hostingController: NSHostingController<AnyView>?
 
-    init(appData: AccountViewModel) {
+    init(appData: AccountViewModel, windowManager: WindowManager) {
         self.appData = appData
+        self.windowManager = windowManager
 
         self.statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         self.popover = NSPopover()
@@ -133,8 +136,6 @@ final class StatusItemController: NSObject {
 
     @objc private func openSettings() {
         NotificationCenter.default.post(name: .openSettingsWindow, object: nil)
-        ActivationPolicyManager.showDockIconAndActivate()
-        NSApp.activate(ignoringOtherApps: true)
     }
 
     @objc private func openAbout() {

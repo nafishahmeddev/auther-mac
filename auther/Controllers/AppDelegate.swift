@@ -19,8 +19,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         // The actual setup happens in AutherApp when the environment is available
     }
 
-    func configureMenuBar(with appData: AccountViewModel) {
-        statusItemController = StatusItemController(appData: appData)
+    func configureMenuBar(with appData: AccountViewModel, windowManager: WindowManager) {
+        statusItemController = StatusItemController(appData: appData, windowManager: windowManager)
     }
 
     func closePopover() {

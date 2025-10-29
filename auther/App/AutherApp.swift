@@ -17,35 +17,22 @@ struct FormState {
 struct AutherApp: App {
     @StateObject private var appData = AccountViewModel()
     @State private var formState: FormState = FormState()
-    @Environment(\.openWindow) private var openWindow
 
-    // This property is required to register AppDelegate with the SwiftUI app lifecycle.
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     init() {
-        // Configure the app delegate with our data
-        // This happens during app initialization, before SwiftUI scenes are created
+        appDelegate.configureMenuBar(with: appData, windowManager: WindowManager.shared)
     }
 
     var body: some Scene {
-        WindowGroup(id: "settings") {
-            SettingsView()
-                .environmentObject(appData)
+        WindowGroup {
+            EmptyView()
                 .onAppear {
-                    // Configure menu bar when settings window appears (app is ready)
-                    appDelegate.configureMenuBar(with: appData)
-                }
-                .onDisappear {
-                    ActivationPolicyManager.hideDockIconIfNoWindows()
-                }
-                .onReceive(NotificationCenter.default.publisher(for: .openSettingsWindow)) { _ in
-                    openWindow(id: "settings")
-                    ActivationPolicyManager.showDockIconAndActivate()
-                    NSApp.activate(ignoringOtherApps: true)
+                    NotificationCenter.default.addObserver(forName: .openSettingsWindow, object: nil, queue: .main) { _ in
+                        SettingsWindowController.shared.show(appData: appData)
+                    }
                 }
         }
-        .windowResizability(.contentSize)
-        .defaultSize(CGSize(width: 600, height: 400))
         .commands {
             CommandMenu("Account") {
                 Button("Add New Account") {
