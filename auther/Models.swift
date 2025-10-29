@@ -20,7 +20,7 @@ extension OTPAlgorithm {
     }
 }
 
-struct Account: Identifiable, Codable, Equatable {
+struct Account: Identifiable, Codable, Equatable, Hashable {
     let id: UUID
     let issuer: String
     let name: String
@@ -38,7 +38,7 @@ struct Account: Identifiable, Codable, Equatable {
     let lastCode: String?
     
     init(id: UUID, issuer: String, name: String, secret: String, type: String, digits: Int, algorithm: String, period: Int?, counter: Int?, lastCode: String?) {
-        self.id = id 
+        self.id = id
         self.issuer = issuer
         self.name = name
         self.secret = secret
