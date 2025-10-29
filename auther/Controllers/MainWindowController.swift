@@ -1,11 +1,11 @@
-// SettingsWindowController.swift
+// MainWindowController.swift
 // auther
 
 import AppKit
 import SwiftUI
 
-final class SettingsWindowController: NSWindowController, NSWindowDelegate {
-    static let shared = SettingsWindowController()
+final class MainWindowController: NSWindowController, NSWindowDelegate {
+    static let shared = MainWindowController()
 
     private init() {
         let contentView = NSHostingView(rootView: AnyView(SettingsView().environmentObject(AccountViewModel())))

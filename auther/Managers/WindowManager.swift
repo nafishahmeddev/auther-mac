@@ -11,5 +11,5 @@ final class WindowManager {
 
     private init() {}
 
-    // Settings window logic moved to SettingsWindowController
+    // Settings window logic moved to MainWindowController
 }

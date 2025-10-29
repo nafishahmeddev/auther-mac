@@ -26,7 +26,7 @@ struct SettingsView: View {
                     Label("About", systemImage: "info.circle")
                 }
         }
-        // Window identifier and title are now set by SettingsWindowController
+        // Window identifier and title are now set by MainWindowController
     }
 
     private var accountsTab: some View {

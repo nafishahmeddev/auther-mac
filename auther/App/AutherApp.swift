@@ -25,11 +25,12 @@ struct AutherApp: App {
     }
 
     var body: some Scene {
-        WindowGroup {
-            EmptyView()
+        WindowGroup(id: "main") {
+            SettingsView()
+                .environmentObject(appData)
                 .onAppear {
                     NotificationCenter.default.addObserver(forName: .openSettingsWindow, object: nil, queue: .main) { _ in
-                        SettingsWindowController.shared.show(appData: appData)
+                        MainWindowController.shared.show(appData: appData)
                     }
                 }
         }
