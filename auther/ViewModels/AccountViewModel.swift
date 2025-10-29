@@ -1,5 +1,5 @@
 //
-//  Appdata.swift
+//  AccountViewModel.swift
 //  auther
 //
 //  Created by Nafish Ahmed on 04/07/25.
@@ -7,7 +7,7 @@
 import Foundation
 import Combine
 
-class AppData: ObservableObject {
+class AccountViewModel: ObservableObject {
     @Published var accounts: [Account] = [] {
         didSet {
             saveAccounts()

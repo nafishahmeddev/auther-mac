@@ -10,7 +10,7 @@ import SwiftOTP
 
 struct ContentView: View {
     var onAddTapped: (Account?) -> Void
-    @EnvironmentObject var appData: AppData
+    @EnvironmentObject var appData: AccountViewModel
     @State private var currentTime = Date()
     @State private var showForm = false
     @State private var showToast = false // toast state
@@ -96,7 +96,7 @@ struct ContentView: View {
     }
 
     func generateTOTP(for account: Account, at time: Date) -> String {
-        guard let data = base32DecodeToData(account.secret),
+        guard let data = account.secret.base32DecodeToData(),
               let totp = TOTP(
                   secret: data,
                   digits: account.digits,
@@ -109,8 +109,8 @@ struct ContentView: View {
         return code
     }
     
-    func generateHOTP(for account: Account, appData: AppData) {
-        guard let data = base32DecodeToData(account.secret),
+    func generateHOTP(for account: Account, appData: AccountViewModel) {
+        guard let data = account.secret.base32DecodeToData(),
               let counter = account.counter,
               let hotp = HOTP(
                   secret: data,
@@ -145,7 +145,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    let appData = AppData()
+    let appData = AccountViewModel()
     ContentView(
         onAddTapped: { account in
             print("test");

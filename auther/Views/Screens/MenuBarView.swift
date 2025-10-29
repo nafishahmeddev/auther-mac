@@ -10,7 +10,7 @@ import AppKit
 import SwiftOTP
 
 struct MenuBarView: View {
-    @EnvironmentObject var appData: AppData
+    @EnvironmentObject var appData: AccountViewModel
     var onOpenManage: () -> Void
     var onAddAccount: () -> Void
     var onOpenSettings: () -> Void
@@ -152,7 +152,7 @@ struct MenuBarView: View {
     private func code(for account: Account, at time: Date) -> String {
         switch account.type {
         case "TOTP":
-            guard let data = base32DecodeToData(account.secret),
+            guard let data = account.secret.base32DecodeToData(),
                   let totp = TOTP(
                     secret: data,
                     digits: account.digits,
@@ -268,7 +268,7 @@ private struct MenuAccountRow: View {
 
     private func generateAndCopyHOTP() {
         guard account.type == "HOTP",
-              let data = base32DecodeToData(account.secret),
+              let data = account.secret.base32DecodeToData(),
               let counter = account.counter,
               let hotp = HOTP(
                 secret: data,

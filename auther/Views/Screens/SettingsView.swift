@@ -3,7 +3,7 @@ import SwiftUI
 import AppKit
 
 struct SettingsView: View {
-    @EnvironmentObject var appData: AppData
+    @EnvironmentObject var appData: AccountViewModel
 
     @State private var selectedAccount: Account? = nil
 

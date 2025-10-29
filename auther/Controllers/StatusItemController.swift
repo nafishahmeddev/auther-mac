@@ -6,36 +6,23 @@
 import AppKit
 import SwiftUI
 
+extension Notification.Name {
+    static let openSettingsWindow = Notification.Name("openSettingsWindow")
+}
+
 final class StatusItemController: NSObject {
     private let statusItem: NSStatusItem
     private let popover: NSPopover
     private let menu: NSMenu
 
     // Dependencies
-    private let appData: AppData?
-    private let buildRootView: (_ closePopover: @escaping () -> Void) -> AnyView
-    private let onOpenSettings: () -> Void
-    private let onAbout: () -> Void
-    private let onHelp: () -> Void
-    private let onQuit: () -> Void
+    private let appData: AccountViewModel
 
     // Retain hosting controller
     private var hostingController: NSHostingController<AnyView>?
 
-    init(
-        appData: AppData?,
-        buildRootView: @escaping (_ closePopover: @escaping () -> Void) -> AnyView,
-        onOpenSettings: @escaping () -> Void,
-        onAbout: @escaping () -> Void,
-        onHelp: @escaping () -> Void,
-        onQuit: @escaping () -> Void
-    ) {
+    init(appData: AccountViewModel) {
         self.appData = appData
-        self.buildRootView = buildRootView
-        self.onOpenSettings = onOpenSettings
-        self.onAbout = onAbout
-        self.onHelp = onHelp
-        self.onQuit = onQuit
 
         self.statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         self.popover = NSPopover()
@@ -85,14 +72,28 @@ final class StatusItemController: NSObject {
     }
 
     private func prepareHostingController() {
-        let close: () -> Void = { [weak self] in self?.closePopover() }
-        let root: AnyView
-        if appData == nil {
-            root = AnyView(EmptyView())
-        } else {
-            root = buildRootView(close)
-        }
-        let hosting = NSHostingController(rootView: root)
+        let menuBarView = MenuBarView(
+            onOpenManage: {
+                ActivationPolicyManager.showDockIconAndActivate()
+                NSApp.activate(ignoringOtherApps: true)
+            },
+            onAddAccount: {
+                ActivationPolicyManager.showDockIconAndActivate()
+                NSApp.activate(ignoringOtherApps: true)
+            },
+            onOpenSettings: {
+                // This will be handled by the app's window management
+                NotificationCenter.default.post(name: .openSettingsWindow, object: nil)
+                ActivationPolicyManager.showDockIconAndActivate()
+                NSApp.activate(ignoringOtherApps: true)
+            },
+            closeMenu: { [weak self] in
+                self?.closePopover()
+            }
+        )
+        .environmentObject(appData)
+
+        let hosting = NSHostingController(rootView: AnyView(menuBarView))
         hosting.sizingOptions = [.intrinsicContentSize]
         hostingController = hosting
         popover.contentViewController = hosting
@@ -119,13 +120,6 @@ final class StatusItemController: NSObject {
         if popover.isShown {
             popover.performClose(nil)
         } else {
-            // Ensure hosting controller exists and has latest view
-            if hostingController == nil {
-                prepareHostingController()
-            } else {
-                let close: () -> Void = { [weak self] in self?.closePopover() }
-                hostingController?.rootView = buildRootView(close)
-            }
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
             NSApp.activate(ignoringOtherApps: true)
         }
@@ -138,18 +132,23 @@ final class StatusItemController: NSObject {
     // MARK: - Menu Actions
 
     @objc private func openSettings() {
-        onOpenSettings()
+        NotificationCenter.default.post(name: .openSettingsWindow, object: nil)
+        ActivationPolicyManager.showDockIconAndActivate()
+        NSApp.activate(ignoringOtherApps: true)
     }
 
     @objc private func openAbout() {
-        onAbout()
+        NSApp.orderFrontStandardAboutPanel(nil)
+        NSApp.activate(ignoringOtherApps: true)
     }
 
     @objc private func openHelp() {
-        onHelp()
+        if let url = URL(string: "https://example.com/help") {
+            NSWorkspace.shared.open(url)
+        }
     }
 
     @objc private func quitApp() {
-        onQuit()
+        NSApp.terminate(nil)
     }
 }
